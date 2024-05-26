@@ -1,6 +1,6 @@
 "use client"
 
-import { CloseOutlined, Home, MenuOutlined } from "@mui/icons-material"
+import { CloseOutlined, MenuOutlined } from "@mui/icons-material"
 import { AppBar, Button, Container, IconButton, ListItemButton, styled, Toolbar } from "@mui/material"
 import { AppMenu } from "containers"
 import Image from "next/image"
@@ -18,7 +18,7 @@ const AppHeader = () => {
 
   return (
     <AppBar
-      className="my-0 rounded-b-[20px] sm:my-5 sm:rounded-[20px]"
+      className="rounded-b-[20px] sm:rounded-[20px]"
       component={Container}
       elevation={0}
       position="sticky"

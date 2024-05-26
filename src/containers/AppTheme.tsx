@@ -2,10 +2,10 @@
 
 import { CssBaseline } from "@mui/material"
 import { createTheme, ThemeProvider } from "@mui/material/styles"
-import { Roboto_Serif } from "next/font/google"
+import { Roboto } from "next/font/google"
 import { PropsWithChildren } from "react"
 
-const appFont = Roboto_Serif({ subsets: ["vietnamese"] })
+const appFont = Roboto({ display: "swap", subsets: ["latin"], weight: ["300", "400", "500", "700"] })
 
 const theme = createTheme({
   breakpoints: {
@@ -76,7 +76,7 @@ const theme = createTheme({
     borderRadius: 8,
   },
   typography: {
-    button: { fontWeight: 700, textTransform: "none" },
+    button: { fontWeight: 500, textTransform: "none" },
     fontFamily: appFont.style.fontFamily,
   },
 })
