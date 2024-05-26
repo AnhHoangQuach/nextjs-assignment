@@ -1,10 +1,11 @@
 "use client"
 
+import { CssBaseline } from "@mui/material"
 import { createTheme, ThemeProvider } from "@mui/material/styles"
-import { Roboto_Slab } from "next/font/google"
+import { Roboto_Serif } from "next/font/google"
 import { PropsWithChildren } from "react"
 
-const appFont = Roboto_Slab({ subsets: ["vietnamese"] })
+const appFont = Roboto_Serif({ subsets: ["vietnamese"] })
 
 const theme = createTheme({
   breakpoints: {
@@ -65,10 +66,10 @@ const theme = createTheme({
   palette: {
     mode: "light",
     primary: {
-      main: "#725dff",
+      main: "#896EFD",
     },
     secondary: {
-      main: "#009688",
+      main: "#0A0517",
     },
   },
   shape: {
@@ -81,7 +82,12 @@ const theme = createTheme({
 })
 
 const AppTheme = ({ children }: PropsWithChildren) => {
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      {children}
+    </ThemeProvider>
+  )
 }
 
 export default AppTheme

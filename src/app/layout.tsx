@@ -2,12 +2,11 @@ import type { Metadata } from "next"
 
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter"
 import { AppLayout, AppProvider } from "containers"
-import { Roboto_Slab } from "next/font/google"
+import { Roboto_Serif } from "next/font/google"
 import { PropsWithChildren } from "react"
+import "styles/App.scss"
 
-import "./globals.scss"
-
-const appFont = Roboto_Slab({ subsets: ["vietnamese"] })
+const appFont = Roboto_Serif({ subsets: ["vietnamese"] })
 
 export const metadata: Metadata = {
   description: `Airdata là hệ thống quản lý bán vé máy bay hàng đầu tại Việt Nam mang đến một loạt các tính năng và tiện ích độc đáo, nhằm tạo lợi ích tối đa cho doanh nghiệp trong việc quản lý và điều hành bán vé máy bay.`,
@@ -16,9 +15,9 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: PropsWithChildren) => {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={appFont.className}>
-        <AppRouterCacheProvider options={{ enableCssLayer: true }}>
+        <AppRouterCacheProvider>
           <AppProvider>
             <AppLayout>{children}</AppLayout>
           </AppProvider>

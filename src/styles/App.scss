@@ -1,11 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import 'styles/_components.scss';
+@import 'styles/_mui.scss';
 
 body {
   background: var(--color-background-main);
   height: 100vh;
-  color: var(--color-text-primary);
+  color: var(--color-text-primary) !important;
 }
 
 :root {
@@ -13,4 +15,12 @@ body {
   --color-secondary-main: linear-gradient(180deg, rgba(209, 209, 209, 0.15) 0%, rgba(102, 102, 102, 0.05) 100%);
   --color-background-main: radial-gradient(50% 50% at 50% 50%, #3A2782 0%, #050506 100%);
   --color-text-primary: #FFF;
+}
+
+* {
+  outline: none !important;
+}
+
+a:hover {
+  text-decoration: none !important;
 }
