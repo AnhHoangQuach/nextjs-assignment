@@ -6,7 +6,7 @@ import SignUpTodayComponent from "app/common/components/SignUpTodayComponent"
 
 const newFile = () => {
   return (
-    <Container className="flex flex-col gap-[48px] px-[130px] pb-20">
+    <Container className="flex flex-col gap-[48px] px-[130px] py-20">
       <AllRegistrationPackage />
       <ContactComponent />
       <CompareComponent />
