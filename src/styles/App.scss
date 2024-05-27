@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'styles/_components.scss';
+@import 'styles/_mui.scss';
+@import 'styles/_color.scss';
+@import 'styles/_table.scss';
+
+body {
+  background: var(--color-background-main);
+  height: 100vh;
+  color: var(--color-text-primary) !important;
+}
+
+:root {
+  --color-primary-main: linear-gradient(180deg, #896EFD 0%, #6B4AFC 100%);
+  --color-secondary-main: linear-gradient(180deg, rgba(209, 209, 209, 0.15) 0%, rgba(102, 102, 102, 0.05) 100%);
+  --color-background-main: radial-gradient(50% 50% at 50% 50%, #3A2782 0%, #050506 100%);
+  --color-text-primary: #FFF;
+}
+
+* {
+  outline: none !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+}

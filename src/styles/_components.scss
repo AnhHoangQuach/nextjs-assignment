@@ -1,0 +1,31 @@
+.mobile-nav {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 1279px) {
+    align-items: stretch;
+    position: fixed;
+    inset: 80px 0 0 0;
+    flex-direction: column;
+    color: black !important;
+    background-color: #fff !important;
+    border-bottom: 1px solid silver;
+    z-index: 999 !important;
+    transition: all 0.3s;
+
+    > a {
+      border-bottom: 1px solid #dedede;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    display: flex !important;
+  }
+}
+
+.hamburger-icon {
+  color: #fff !important;
+  @media (min-width: 1280px) {
+    display: none !important;
+  }
+}
