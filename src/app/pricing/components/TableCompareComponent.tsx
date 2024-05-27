@@ -6,18 +6,16 @@ import TableCell from "@mui/material/TableCell"
 import TableContainer from "@mui/material/TableContainer"
 import TableHead from "@mui/material/TableHead"
 import TableRow from "@mui/material/TableRow"
+import Image from "next/image"
 
-import CheckIcon from "../assets/check-icon"
-import ContactIcon from "../assets/contact-icon"
-
-export default function TableCompareComponent() {
+const TableCompareComponent = () => {
   const tableCellLayout = [
     {
       id: 1,
       title: (
         <div className="flex min-h-[155px] flex-col justify-between">
           <div className="text-center text-white">
-            <div className="text-[30px] leading-8">Free</div>
+            <div className="mb-2 text-[30px] leading-8">Free</div>
             <div className="text-sm font-semibold">for everyone</div>
           </div>
           <Button className="w-full bg-white py-5 text-[14px] leading-4 text-[#0A0517]">Sign up today</Button>
@@ -29,7 +27,7 @@ export default function TableCompareComponent() {
       title: (
         <div className="flex min-h-[155px] flex-col justify-between">
           <div className="text-center text-white">
-            <div className="text-[30px] leading-8">$10</div>
+            <div className="mb-2 text-[30px] leading-8">$10</div>
             <div>
               <div className="text-sm font-semibold">per user/month</div>
               <div className="text-xs">billed monthly</div>
@@ -44,7 +42,7 @@ export default function TableCompareComponent() {
       title: (
         <div className="flex min-h-[155px] flex-col justify-between">
           <div className="text-center text-white">
-            <div className="text-[30px] leading-8">$18</div>
+            <div className="mb-2 text-[30px] leading-8">$18</div>
             <div>
               <div className="text-sm font-semibold">per user/month</div>
               <div className="text-xs">billed monthly</div>
@@ -60,7 +58,7 @@ export default function TableCompareComponent() {
         <div className="flex min-h-[155px] flex-col justify-between">
           <div className="text-center text-white">
             <div className="mb-4 flex justify-center">
-              <ContactIcon />
+              <Image alt="Logo" height={36} priority src="/contact.png" width={25} />
             </div>
             <div className="text-sm font-semibold">Contact for pricing</div>
           </div>
@@ -88,23 +86,23 @@ export default function TableCompareComponent() {
     createData(
       "Slack Import",
       <div className="flex justify-center">
-        <CheckIcon />
+        <Image alt="Logo" className="rounded-t-xl" height={24} priority src="/check-icon.svg" width={24} />
       </div>,
       <div className="flex justify-center">
-        <CheckIcon />
+        <Image alt="Logo" className="rounded-t-xl" height={24} priority src="/check-icon.svg" width={24} />
       </div>,
       <div className="flex justify-center">
-        <CheckIcon />
+        <Image alt="Logo" className="rounded-t-xl" height={24} priority src="/check-icon.svg" width={24} />
       </div>,
       <div className="flex justify-center">
-        <CheckIcon />
+        <Image alt="Logo" className="rounded-t-xl" height={24} priority src="/check-icon.svg" width={24} />
       </div>,
     ),
   ]
 
   return (
     <TableContainer
-      className="table-custom mt-12 rounded-[20px] p-6 text-white"
+      className="table-custom rounded-[20px] p-6 text-white"
       component={Paper}
       style={{
         background: "linear-gradient(0deg, rgba(66, 66, 66, 0.15) 0%, rgba(112, 112, 178, 0.2) 100%)",
@@ -146,3 +144,5 @@ export default function TableCompareComponent() {
     </TableContainer>
   )
 }
+
+export default TableCompareComponent

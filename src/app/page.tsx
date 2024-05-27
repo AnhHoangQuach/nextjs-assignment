@@ -1,6 +1,7 @@
 import { ArrowCircleRightOutlined } from "@mui/icons-material"
 import { Button, Container, Grid } from "@mui/material"
-import CardGallery from "components/CardGallery"
+import { CardGallery } from "app/components"
+import { Roboto } from "next/font/google"
 
 const cardGalleries = [
   {
@@ -67,44 +68,48 @@ const cardGalleries = [
   },
 ]
 
+const robotoFont = Roboto({ display: "swap", subsets: ["latin"], weight: ["300", "400", "500", "700"] })
+
 const HomePage = () => {
   return (
-    <Container className="my-20 flex flex-col items-center justify-center md:my-[168px]">
-      <div
-        className="text-3xl md:text-5xl"
-        style={{
-          textShadow: "10px -10px 10px #000000, 20px 20px 20px #000000, 20px 0px 40px #000000, 0px 1px 100px #000000",
-        }}
-      >
-        Threads Gallery
-      </div>
-      <Container className="mb-6 mt-2 text-center text-2xl font-light" maxWidth="md">
-        Become an expert on how to write threads by taking inspiration from our own teams' curated examples and use
-        cases.
-      </Container>
-      <div className="rounded-xl border-[#A18AFF3D] p-1" style={{ background: "#A18AFF3D" }}>
-        <Button
-          className="h-14 w-48"
-          color="primary"
-          endIcon={<ArrowCircleRightOutlined fontSize="large" />}
-          variant="contained"
+    <div className={robotoFont.className}>
+      <Container className="my-20 flex flex-col items-center justify-center md:my-[168px]">
+        <div
+          className="text-3xl md:text-5xl"
+          style={{
+            textShadow: "10px -10px 10px #000000, 20px 20px 20px #000000, 20px 0px 40px #000000, 0px 1px 100px #000000",
+          }}
         >
-          Sign up today
-        </Button>
-      </div>
-      <Grid className="my-6" container spacing={3}>
-        {cardGalleries.map((gallery, index) => (
-          <Grid item key={index} md={4}>
-            <CardGallery
-              description={gallery.description}
-              image={gallery.image}
-              links={gallery.links}
-              title={gallery.title}
-            />
-          </Grid>
-        ))}
-      </Grid>
-    </Container>
+          Threads Gallery
+        </div>
+        <Container className="mb-6 mt-2 text-center text-2xl font-light" maxWidth="md">
+          Become an expert on how to write threads by taking inspiration from our own teams' curated examples and use
+          cases.
+        </Container>
+        <div className="rounded-xl border-[#A18AFF3D] p-1" style={{ background: "#A18AFF3D" }}>
+          <Button
+            className="h-14 w-48"
+            color="primary"
+            endIcon={<ArrowCircleRightOutlined fontSize="large" />}
+            variant="contained"
+          >
+            Sign up today
+          </Button>
+        </div>
+        <Grid className="my-6" container spacing={3}>
+          {cardGalleries.map((gallery, index) => (
+            <Grid item key={index} md={4}>
+              <CardGallery
+                description={gallery.description}
+                image={gallery.image}
+                links={gallery.links}
+                title={gallery.title}
+              />
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+    </div>
   )
 }
 
