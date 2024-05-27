@@ -7,9 +7,10 @@
     position: fixed;
     inset: 80px 0 0 0;
     flex-direction: column;
-    background-color: var(--color-primary-main) !important;
+    color: black !important;
+    background-color: #fff !important;
     border-bottom: 1px solid silver;
-    z-index: 999;
+    z-index: 999 !important;
     transition: all 0.3s;
 
     > a {

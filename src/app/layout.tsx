@@ -2,15 +2,15 @@ import type { Metadata } from "next"
 
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter"
 import { AppLayout, AppProvider } from "containers"
-import { Roboto_Serif } from "next/font/google"
+import { Roboto } from "next/font/google"
 import { PropsWithChildren } from "react"
 import "styles/App.scss"
 
-const appFont = Roboto_Serif({ subsets: ["vietnamese"] })
+const appFont = Roboto({ display: "swap", subsets: ["latin"], weight: ["300", "400", "500", "700"] })
 
 export const metadata: Metadata = {
-  description: `Airdata là hệ thống quản lý bán vé máy bay hàng đầu tại Việt Nam mang đến một loạt các tính năng và tiện ích độc đáo, nhằm tạo lợi ích tối đa cho doanh nghiệp trong việc quản lý và điều hành bán vé máy bay.`,
-  title: `Airdata - Hệ thống đặt vé đại lý hiện đại`,
+  description: `Threads Gallery`,
+  title: `Threads Gallery`,
 }
 
 const RootLayout = ({ children }: PropsWithChildren) => {
