@@ -3,6 +3,8 @@
 @tailwind utilities;
 @import 'styles/_components.scss';
 @import 'styles/_mui.scss';
+@import 'styles/_color.scss';
+@import 'styles/_table.scss';
 
 body {
   background: var(--color-background-main);

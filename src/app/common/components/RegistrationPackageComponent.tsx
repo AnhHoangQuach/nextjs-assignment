@@ -1,24 +1,24 @@
-import CheckIcon from "../assets/check-icon"
 import { Button } from "@mui/material"
 
+import CheckIcon from "../assets/check-icon"
+
 type Props = {
-  listItems: string[]
-  listContent: string[]
-  border: string
   backgroundColor: string
+  border: string
   colorButton: string
   colorTitle: string
+  listContent: string[]
+  listItems: string[]
 }
 
 export default function RegistrationPackageComponent({
-  listItems,
-  listContent,
-  border,
   backgroundColor,
+  border,
   colorButton,
   colorTitle,
+  listContent,
+  listItems,
 }: Props) {
-  const color = "#6FFF88"
   return (
     <div
       className="rounded-2xl p-4"
@@ -38,7 +38,7 @@ export default function RegistrationPackageComponent({
         </div>
         <div className="flex flex-col gap-[12px] pt-5">
           {listItems.map((item, index) => (
-            <div key={index} className="flex items-center gap-3 text-xs">
+            <div className="flex items-center gap-3 text-xs" key={index}>
               <CheckIcon />
               <span>{item}</span>
             </div>

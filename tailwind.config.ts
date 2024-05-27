@@ -6,6 +6,12 @@ const config: Config = {
   plugins: [],
   theme: {
     extend: {
+      backgroundImage:{
+        "custom-gradient-1": "linear-gradient(180deg, #A1A5F2 0%, #8175EA 100%)",
+        "custom-gradient-2": "linear-gradient(180deg, #FAE475 0%, #FFAB52 100%)",
+        "custom-gradient-3": "linear-gradient(180deg, #E99FF2 0%, #D375EA 100%)",
+
+      },
       colors: {
         primary: {
           main: "var(--color-primary-main)",
@@ -19,7 +25,7 @@ const config: Config = {
         md: "900px",
         sm: "600px",
         xl: "1600px",
-      },
+      }
     },
   },
 }
